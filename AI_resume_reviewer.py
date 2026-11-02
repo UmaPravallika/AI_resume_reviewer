@@ -41,7 +41,7 @@ job_description = st.text_area(
 )
 if uploaded_file is not None:
     st.success(f"Resume uploaded successfully")
-groq_api_key="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"
+groq_api_key = st.secrets["GROQ_API_KEY"]
 with st.spinner("Analyze My Resume"):
     if uploaded_file is None:
         st.warning("Please upload your resume.")
